@@ -6,9 +6,9 @@
  */
 //进度条
 window.onload=function(){
+	var oFirst=document.getElementById('loadDiv');
 	var oDiv=document.getElementById('line');	
 	var oSpan1=document.getElementById('loginnum');
-	var oFirst=document.getElementById('loadDiv');
 	var oSecond=document.getElementById('second');
 	var total=77;
 	var n=0;
@@ -165,10 +165,6 @@ window.onload=function(){
 	for(var i=0;i<aImg.length;i++){
 		(function(index){
 			aImg[i].onmouseover=function(){
-				for(var i=0;i<aImg.length;i++){
-					move(aImg[i],{opacity:1});
-					move(aSpan[i],{opacity:0});
-				}
 					move(aImg[index],{opacity:0});
 					move(aSpan[index],{opacity:0.8});
 			};
@@ -195,7 +191,7 @@ window.onload=function(){
 					aA[iNow].className='active';
 					move(oMain,{top:-(iNow*600-76)});
 				iNow == 2 ? setTimeout(about,100) : about_no();
-				iNow == 3 ? setTimeout(conFn,100) : conFn_no(); 
+				iNow == 3 ? setTimeout(conFn,100) : conFn_no();
 			}
 			else
 			{
